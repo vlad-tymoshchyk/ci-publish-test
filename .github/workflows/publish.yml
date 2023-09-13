@@ -1,0 +1,9 @@
+name: publish-new-version
+on: [push]
+jobs:
+  test-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Test echo successfull"
+      - run: git log
+

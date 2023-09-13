@@ -8,4 +8,5 @@ jobs:
       - run: echo "Test echo successfull"
       - run: ls -a
       - run: git log
+      - run: git remote -v
 

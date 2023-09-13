@@ -7,4 +7,5 @@ jobs:
       - uses: actions/checkout@v3
       - run: echo "Test echo successfull"
       - run: ls -a
+      - run: git log
 

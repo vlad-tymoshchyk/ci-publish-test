@@ -1,10 +1,20 @@
 name: publish-new-version
-on: [push]
+on:
+  workflow_dispatch:
+    input:
+      update_type:
+        description: What type of version you want to publish?
+        options:
+          - patch
+          - minor
+          - major
+
 jobs:
   test-echo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: echo "${{ github.event.inputs.update_type }}"
       - run: date > date.txt 
       - run: git status
       - run: git add .

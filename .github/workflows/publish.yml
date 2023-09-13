@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       update_type:
+        type: choice
         description: What type of version you want to publish?
         options:
           - patch

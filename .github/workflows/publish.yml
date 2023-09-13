@@ -4,6 +4,7 @@ jobs:
   test-echo:
     runs-on: ubuntu-latest
     steps:
+      - use: actions/checkout@v3
       - run: echo "Test echo successfull"
       - run: ls -a
 

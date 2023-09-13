@@ -5,8 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: echo "Test echo successfull"
-      - run: ls -a
-      - run: git log
-      - run: git remote -v
+      - run: date > date.txt 
+      - run: git status
 

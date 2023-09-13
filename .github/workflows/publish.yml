@@ -8,6 +8,8 @@ jobs:
       - run: date > date.txt 
       - run: git status
       - run: git add .
+      - run: git config user.email test@test.com
+      - run: git config user.name github-actions
       - run: git commit -m "github-action"
       - run: git push
 

@@ -1,0 +1,12 @@
+name: save-screenshot
+on:
+  push
+
+jobs:
+  test-echo:
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: actions/checkout@v3
+      # - run: echo "${{ github.event.inputs.update_type }}"
+      run: echo test here
+

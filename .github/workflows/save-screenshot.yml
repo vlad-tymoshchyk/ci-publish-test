@@ -1,6 +1,6 @@
 name: save-screenshot
 on:
-  pull_request
+  # pull_request
 
 jobs:
   test-echo:

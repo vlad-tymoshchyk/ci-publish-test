@@ -1,6 +1,5 @@
 name: comment
-on:
-  pull_request
+on: pull_request
 jobs:
   comment:
     runs-on: ubuntu-latest
@@ -8,9 +7,16 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            github.rest.issues.createComment({
+            const response = await github.rest.issues.listComments({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '👋 Thanks for reporting!'
+            })
+            const comments = response.data;
+            comments.forEach(comment => {
+              github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: comment.id,
+              })
             })

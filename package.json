@@ -20,5 +20,9 @@
   "homepage": "https://github.com/vlad-tymoshchyk/ci-publish-test#readme",
   "dependencies": {
     "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "testcafe": "^3.3.0",
+    "testcafe-blink-diff": "^0.5.5"
   }
 }

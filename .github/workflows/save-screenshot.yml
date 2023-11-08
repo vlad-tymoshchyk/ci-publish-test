@@ -8,5 +8,5 @@ jobs:
     steps:
       # - uses: actions/checkout@v3
       # - run: echo "${{ github.event.inputs.update_type }}"
-      run: echo test here
+      run: echo test
 

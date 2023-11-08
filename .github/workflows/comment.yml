@@ -11,7 +11,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-            })
+            });
             const comments = response.data;
             previousComments = comments.filter(comment => {
               return comment.body.includes('[Test bot]');

@@ -1,10 +1,6 @@
 name: comment
 on:
   pull_request
-# on:
-#   issues:
-#     types: [opened]
-
 jobs:
   comment:
     runs-on: ubuntu-latest

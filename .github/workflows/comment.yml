@@ -16,6 +16,8 @@ jobs:
             previousComments = comments.filter(comment => {
               return comment.body.includes('[Test bot]');
             });
+
+            # remove previous comments left by this bot
             previousComments.forEach(comment => {
               github.rest.issues.deleteComment({
                 owner: context.repo.owner,
@@ -23,6 +25,8 @@ jobs:
                 comment_id: comment.id,
               })
             });
+
+            # create comment
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,

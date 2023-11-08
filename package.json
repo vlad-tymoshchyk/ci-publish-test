@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vlad-tymoshchyk/ci-publish-test/issues"
   },
-  "homepage": "https://github.com/vlad-tymoshchyk/ci-publish-test#readme"
+  "homepage": "https://github.com/vlad-tymoshchyk/ci-publish-test#readme",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
 }

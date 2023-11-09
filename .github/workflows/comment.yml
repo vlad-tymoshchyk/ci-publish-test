@@ -4,7 +4,10 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
+      - name: generate value
+        run: echo "BUILD_SIZE=1564" >> "$GITHUB_OUTPUT"
+      - name: post comment
+        uses: actions/github-script@v6
         with:
           script: |
             const response = await github.rest.issues.listComments({

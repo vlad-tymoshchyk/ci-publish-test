@@ -10,6 +10,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            console.log('test');
             const response = await github.rest.issues.listComments({
               issue_number: context.issue.number,
               owner: context.repo.owner,

@@ -11,7 +11,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            console.log("here you are: ${{ steps.value-generator.outputs.BUILD_SIZE }}");
+            console.log("here you are:", ${{ steps.value-generator.outputs.BUILD_SIZE }});
             const response = await github.rest.issues.listComments({
               issue_number: context.issue.number,
               owner: context.repo.owner,

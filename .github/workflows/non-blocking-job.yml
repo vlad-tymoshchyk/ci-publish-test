@@ -1,0 +1,13 @@
+name: non-blocking-job
+on:
+  pull_request:
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: success
+        run: echo "This is success job"
+
+      - name: fail
+        run: exit 1

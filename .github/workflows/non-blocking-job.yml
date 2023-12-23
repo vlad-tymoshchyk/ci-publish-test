@@ -8,3 +8,6 @@ jobs:
     steps:
       - name: success
         run: echo "This is success job"
+
+      - name: fail
+        run: exit 1
